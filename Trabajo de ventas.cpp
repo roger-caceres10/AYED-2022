@@ -1,6 +1,4 @@
-/***************
-***	INCLUDES ***
-****************/
+//	INCLUDES 
 
 #include <iostream>
 #include <array>
@@ -8,9 +6,7 @@
 #include <string>
 #include <vector>
 
-/**************
-***	DEFINES ***
-***************/
+//	DEFINES 
 
 #define NUM_MONTHS 12
 #define DATA_BIN_FILE "data.bin"
@@ -19,9 +15,7 @@
 #define TABLE_COL_NAME_SIZE 25
 #define TABLE_COL_MONTH_SIZE 12
 
-/*************
-***	MACROS ***
-**************/
+//	MACROS 
 
 #define GetSalesCountByRegion(data, region) GetSalesCount(data, region, -1, -1)
 #define GetSalesCountBySeller(data, seller) GetSalesCount(data, -1, seller, -1)
@@ -37,9 +31,7 @@
 #define GetSalesSumAmountByRegionMonth(data, region, month) GetSalesSumAmount(data, region, -1, month)
 #define GetSalesSumAmountBySellerMonth(data, seller, month) GetSalesSumAmount(data, -1, seller, month)
 
-/*************
-***	USINGS ***
-**************/
+//	USINGS 
 
 using namespace std;
 
@@ -51,9 +43,7 @@ using Data =
 					int>,
 				NUM_MONTHS>>>;
 
-/******************
-***	DEFINITIONS ***
-*******************/
+//	DEFINITIONS 
 
 bool LoadData(Data &);
 void SaveData(Data &);
@@ -73,9 +63,7 @@ void PrintMonths(const vector<int>);
 void PrintStatistics(const Data &, int = -1, int = -1, int = -1);
 void PrintTable(const Data &, int);
 
-/***********
-***	MAIN ***
-************/
+//	MAIN
 
 int main()
 {
@@ -89,9 +77,7 @@ int main()
 	return 0;
 }
 
-/****************
-***	FUNCTIONS ***
-*****************/
+//	FUNCTIONS
 
 bool LoadData(Data& data)
 {
